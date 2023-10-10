@@ -17,14 +17,36 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home Page'),
         backgroundColor: Colors.blue,
       ),
-      body: ElevatedButton.icon(onPressed: (){
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const MapPage()
-            )
-        );
-      }, icon: const Icon(Icons.abc_sharp), label: const Text('Click me'))
+      body: Column(
+        children: [
+          ElevatedButton.icon(onPressed: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MapPage()
+                )
+            );
+          }, icon: const Icon(Icons.location_on_rounded), label: const Text('Current Location')),
+
+          ElevatedButton.icon(onPressed: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MapPage()
+                )
+            );
+          }, icon: const Icon(Icons.looks_one_rounded), label: const Text('Polyline 01')),
+
+          ElevatedButton.icon(onPressed: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MapPage()
+                )
+            );
+          }, icon: const Icon(Icons.looks_two_rounded), label: const Text('Polyline 02')),
+        ],
+      )
     );
   }
 }
