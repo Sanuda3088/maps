@@ -2,12 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as location;
-//import 'package:geojson/geojson.dart';
 import 'package:provider/provider.dart';
 import 'dart:async' show Future;
-//import 'dart:convert';
 
-class LocationProvider extends ChangeNotifier {
+
+class LocationProvider1 extends ChangeNotifier {
   LatLng? _currentLocation;
 
   LatLng? get currentLocation => _currentLocation;
@@ -18,17 +17,17 @@ class LocationProvider extends ChangeNotifier {
   }
 }
 
-class MapPage extends StatefulWidget {
-  const MapPage({super.key});
+class P2Page extends StatefulWidget {
+  const P2Page({super.key});
 
   @override
-  State<MapPage> createState() => _MapPageState();
+  State<P2Page> createState() => _P2PageState();
 }
 
-class _MapPageState extends State<MapPage> {
+class _P2PageState extends State<P2Page> {
   final LatLng _initialCameraPosition = const LatLng(20.5937, 78.9629);
   late GoogleMapController _controller;
-  late LocationProvider _locationProvider;
+  late LocationProvider1 _locationProvider;
   final location.Location _location = location.Location();
   MapType _mapType = MapType.normal;
   bool _centerOnLocation = true;
@@ -385,23 +384,16 @@ class _MapPageState extends State<MapPage> {
     const LatLng(6.801960845000053, 80.80714013200003),
     const LatLng(6.801948796000033, 80.80726055200006),
     const LatLng(6.80195733100004, 80.80729253600003)
-    // Add more points as needed 
-  ];
-
-  List<LatLng> polylineCoordinates02 = [
-    const LatLng(7.0809558615927495, 80.02046294561433), // Point 1
-    const LatLng(7.080413079258999, 80.02045041073958), // Point 2
     // Add more points as needed
   ];
 
   // Create a Polyline object with the polyline details
   final Set<Polyline> _polyline01 = {};
-  final Set<Polyline> _polyline02 = {};
 
   @override
   void initState() {
     super.initState();
-    _locationProvider = Provider.of<LocationProvider>(context, listen: false);
+    _locationProvider = Provider.of<LocationProvider1>(context, listen: false);
   }
 
   @override
@@ -424,7 +416,7 @@ class _MapPageState extends State<MapPage> {
               ),
               onMapCreated: _onMapCreated,
               myLocationEnabled: true,
-              polylines: _polyline01.union(_polyline02), // Use the _polylines set here
+              polylines: _polyline01, // Use the _polylines set here
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -465,34 +457,21 @@ class _MapPageState extends State<MapPage> {
         ));
         // Update the polylines
         _updatePolyline01();
-        _updatePolyline02();
         _centerOnLocation = false;
       }
     });
   }
+
 
   // Function to update polyline 01
   void _updatePolyline01() {
     setState(() {
       _polyline01.clear();
       _polyline01.add(Polyline(
-        polylineId: const PolylineId('polyline_01'),
-        color: Colors.red,
-        width: 10,
-        points: polylineCoordinates01,
-      ));
-    });
-  }
-
-  // Function to update polyline 02
-  void _updatePolyline02() {
-    setState(() {
-      _polyline02.clear();
-      _polyline02.add(Polyline(
         polylineId: const PolylineId('polyline_02'),
         color: Colors.red,
         width: 10,
-        points: polylineCoordinates02,
+        points: polylineCoordinates01,
       ));
     });
   }
