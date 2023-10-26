@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maps/map.dart';
+import 'package:maps/polylines/poly02.dart';
+import 'package:maps/polylines/poly01.dart';
 import 'package:provider/provider.dart';
 import 'homepage.dart';
 
@@ -8,7 +10,9 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => LocationProvider()),
+        ChangeNotifierProvider(create: (context) => LocationProvider()),
+        ChangeNotifierProvider(create: (context) => LocationProvider1()),
+        ChangeNotifierProvider(create: (context) => LocationProvider2()),
         // Add other providers if needed
       ],
       child: const MyApp(),
