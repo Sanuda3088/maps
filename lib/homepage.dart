@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maps/map.dart';
+import 'package:maps/polylines/poly02.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const MapPage()
+                    builder: (context) => const P2Page()
                 )
             );
           }, icon: const Icon(Icons.looks_two_rounded), label: const Text('Polyline 02')),
