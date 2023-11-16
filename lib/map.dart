@@ -389,8 +389,8 @@ class _MapPageState extends State<MapPage> {
   ];
 
   List<LatLng> polylineCoordinates02 = [
-    const LatLng(7.0809558615927495, 80.02046294561433), // Point 1
-    const LatLng(7.080413079258999, 80.02045041073958), // Point 2
+    const LatLng(7.073402703308713, 80.02080016336816),
+    const LatLng(7.072804582683621, 80.02072667995125), // Point 2
     // Add more points as needed
   ];
 

@@ -31,7 +31,7 @@ class CommonMapPage extends StatefulWidget {
   final String polylineId;
   final LatLng initialCameraPosition;
 
-  CommonMapPage({
+  const CommonMapPage({super.key, 
     required this.polylineCoordinates,
     required this.polylineId,
     required this.initialCameraPosition,
@@ -84,8 +84,8 @@ class _CommonMapPageState extends State<CommonMapPage> {
               polylines: {
                 Polyline(
                   polylineId: PolylineId(widget.polylineId),
-                  color: Colors.red,
-                  width: 10,
+                  color: Color.fromARGB(255, 21, 128, 243),
+                  width: 5,
                   points: widget.polylineCoordinates,
                 ),
               },
