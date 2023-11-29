@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maps/map.dart';
+import 'package:maps/map_tile.dart';
 import 'package:maps/polylines/poly01.dart';
 import 'package:maps/polylines/poly02.dart';
 
@@ -47,6 +48,12 @@ class _HomePageState extends State<HomePage> {
                 )
             );
           }, icon: const Icon(Icons.looks_two_rounded), label: const Text('Polyline 02')),
+
+          const MapTile(
+            imageName: "assets/map.png",
+            destination: "Horton Plains", 
+            distance: "4Km", 
+            time: "Approx 2 hours")
         ],
       )
     );
