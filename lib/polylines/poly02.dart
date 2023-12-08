@@ -2,9 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as location;
+import 'package:maps/Coordinates.dart';
 import 'package:provider/provider.dart';
 import 'dart:async' show Future;
-
 
 class LocationProvider2 extends ChangeNotifier {
   LatLng? _currentLocation;
@@ -25,7 +25,6 @@ class P2Page extends StatefulWidget {
 }
 
 class _P2PageState extends State<P2Page> {
-  final LatLng _initialCameraPosition = const LatLng(20.5937, 78.9629);
   late GoogleMapController _controller;
   late LocationProvider2 _locationProvider;
   final location.Location _location = location.Location();
@@ -33,11 +32,7 @@ class _P2PageState extends State<P2Page> {
   bool _centerOnLocation = true;
 
   // Define a list of LatLng points for your polyline
-  List<LatLng> polylineCoordinates02 = [
-    const LatLng(7.0809558615927495, 80.02046294561433), // Point 1
-    const LatLng(7.080413079258999, 80.02045041073958), // Point 2
-    // Add more points as needed
-  ];
+  List<LatLng> polylineCoordinates02 = polylineCoordinates.route2;
 
   // Create a Polyline object with the polyline details
   final Set<Polyline> _polyline02 = {};
@@ -63,8 +58,8 @@ class _P2PageState extends State<P2Page> {
               //zoomControlsEnabled: false,
               myLocationButtonEnabled: false,
               mapType: _mapType,
-              initialCameraPosition: CameraPosition(
-                target: _initialCameraPosition,
+              initialCameraPosition: const CameraPosition(
+                target: LatLng(7.0809558615927495, 80.02046294561433),
               ),
               onMapCreated: _onMapCreated,
               myLocationEnabled: true,
@@ -102,11 +97,17 @@ class _P2PageState extends State<P2Page> {
       if (_locationProvider.currentLocation == null) {
         _locationProvider
             .updateCurrentLocation(LatLng(l.latitude!, l.longitude!));
+        _controller.animateCamera(CameraUpdate.newCameraPosition(
+          CameraPosition(target: _locationProvider.currentLocation!, zoom: 16),
+        ));
+        /*if (_locationProvider.currentLocation == null) {
+        _locationProvider
+            .updateCurrentLocation(LatLng(l.latitude!, l.longitude!));
       }
       if (_locationProvider.currentLocation != null && _centerOnLocation) {
         _controller.animateCamera(CameraUpdate.newCameraPosition(
           CameraPosition(target: _locationProvider.currentLocation!, zoom: 19),
-        ));
+        ));*/
         // Update the polylines
         //_updatePolyline01();
         _updatePolyline02();
@@ -114,7 +115,6 @@ class _P2PageState extends State<P2Page> {
       }
     });
   }
-
 
   // Function to update polyline 02
   void _updatePolyline02() {
