@@ -1,20 +1,19 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:maps/Coordinates.dart';
 
-import '../polylines/poly01.dart';
 
-class R1Page extends StatefulWidget {
+class sp01galagama_01Page extends StatefulWidget {
   @override
-  _R1PageState createState() => _R1PageState();
+  _sp01galagama_01PageState createState() => _sp01galagama_01PageState();
 }
 
-class _R1PageState extends State<R1Page> {
+class _sp01galagama_01PageState extends State<sp01galagama_01Page> {
   late GoogleMapController _controller;
   static const LatLng _initialLocation =
-      LatLng(6.802005081000061, 80.80740669200003);
+      LatLng(6.770933347000039, 80.77191361900003);
 
-  List<LatLng> polylineCoordinates01 = polylineCoordinates.route1;
+  List<LatLng> polylineCoordinates01 = polylineCoordinates.sp01galagama_01;
   final Set<Polyline> _polyline01 = {};
 
   @override
@@ -60,3 +59,4 @@ class _R1PageState extends State<R1Page> {
     });
   }
 }
+*/

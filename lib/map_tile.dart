@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 
 class MapTile extends StatelessWidget {
   //final String coffeeImagePath;
   final String pathName;
-  //final Function(BuildContext) onImageTap;
+  final Function(BuildContext) onImageTap;
 
   const MapTile({
     super.key,
     //required this.coffeeImagePath,
     required this.pathName,
-    //required this.onImageTap,
+    required this.onImageTap,
   });
   @override
   Widget build(BuildContext context) {
@@ -26,8 +28,13 @@ class MapTile extends StatelessWidget {
           children: [
             // Coffee image
             GestureDetector(
-              onTap: () {
-                //onImageTap(context);
+              onTap: () {onImageTap(context);
+                /*Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => 
+                  ),
+                );*/
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),

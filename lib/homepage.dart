@@ -4,7 +4,7 @@ import 'package:maps/Starting_Points/point_01/ending_points_01.dart';
 //import 'package:maps/Starting_Points/point_03/ending_points_03.dart';
 //import 'package:maps/Starting_Points/point_04/ending_points_04.dart';
 //import 'package:maps/Starting_Points/point_05/ending_points_05.dart';
-import 'package:maps/map.dart';
+import 'package:maps/full_map.dart';
 import 'package:maps/overall_route/route01.dart';
 import 'package:maps/overall_route/route02.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               flex: 5,
               child: GoogleMap(
-                initialCameraPosition: CameraPosition(
+                initialCameraPosition: const CameraPosition(
                   target:
                       LatLng(6.8020628, 80.8073284), // Initial camera position
                   zoom: 12.0,
@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const MapPage()));
+                                  builder: (context) => const FullMapPage()));
                         },
                         icon: const Icon(Icons.location_on_rounded),
                         label: const Text('Current Location')),
@@ -203,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => EndingPoints01()));
+                                  builder: (context) => const EndingPoints01()));
                         },
                         icon: const Icon(Icons.looks_one_rounded),
                         label: const Text('Starting Point 01')),

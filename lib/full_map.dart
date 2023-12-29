@@ -18,14 +18,14 @@ class LocationProvider extends ChangeNotifier {
   }
 }
 
-class MapPage extends StatefulWidget {
-  const MapPage({super.key});
+class FullMapPage extends StatefulWidget {
+  const FullMapPage({super.key,});
 
   @override
-  State<MapPage> createState() => _MapPageState();
+  State<FullMapPage> createState() => _FullMapPageState();
 }
 
-class _MapPageState extends State<MapPage> {
+class _FullMapPageState extends State<FullMapPage> {
   final LatLng _initialCameraPosition = const LatLng(20.5937, 78.9629);
   late GoogleMapController _controller;
   late LocationProvider _locationProvider;
