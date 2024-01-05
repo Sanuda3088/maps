@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as location;
-import 'package:maps/Coordinates.dart';
+import 'package:maps/coordinates/point01_Coordinates.dart';
 import 'package:provider/provider.dart';
 import 'dart:async' show Future;
 

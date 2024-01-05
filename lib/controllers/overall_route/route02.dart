@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:maps/Coordinates.dart';
+import 'package:maps/coordinates/point01_Coordinates.dart';
+import 'package:maps/controllers/poly02.dart';
 
-import '../polylines/poly01.dart';
-
-class R1Page extends StatefulWidget {
+class R2Page extends StatefulWidget {
   @override
-  _R1PageState createState() => _R1PageState();
+  _R2PageState createState() => _R2PageState();
 }
 
-class _R1PageState extends State<R1Page> {
+class _R2PageState extends State<R2Page> {
   late GoogleMapController _controller;
   static const LatLng _initialLocation =
-      LatLng(6.802005081000061, 80.80740669200003);
+      LatLng(7.0809558615927495, 80.02046294561433);
 
-  List<LatLng> polylineCoordinates01 = polylineCoordinates.route1;
-  final Set<Polyline> _polyline01 = {};
+  List<LatLng> polylineCoordinates02 = polylineCoordinates.route2;
+  final Set<Polyline> _polyline02 = {};
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +29,16 @@ class _R1PageState extends State<R1Page> {
         ),
         onMapCreated: (GoogleMapController controller) {
           _controller = controller;
-          _updatePolyline01();
+          _updatePolyline02();
         },
-        polylines: _polyline01,
+        polylines: _polyline02,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push<void>(
             context,
             MaterialPageRoute<void>(
-              builder: (BuildContext context) => const P1Page(),
+              builder: (BuildContext context) => const P2Page(),
             ),
           );
         },
@@ -48,14 +47,14 @@ class _R1PageState extends State<R1Page> {
     );
   }
 
-  void _updatePolyline01() {
+  void _updatePolyline02() {
     setState(() {
-      _polyline01.clear();
-      _polyline01.add(Polyline(
-        polylineId: const PolylineId('polyline_01'),
-        color: const Color.fromARGB(255, 40, 150, 241),
+      _polyline02.clear();
+      _polyline02.add(Polyline(
+        polylineId: const PolylineId('polyline_02'),
+        color: Colors.red,
         width: 10,
-        points: polylineCoordinates01,
+        points: polylineCoordinates02,
       ));
     });
   }

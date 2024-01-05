@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:maps/Starting_Points/point_01/ending_points_01.dart';
+import 'package:maps/Starting_Points/point_02/ending_points_02.dart';
 //import 'package:maps/Starting_Points/point_02/ending_points_02.dart';
 //import 'package:maps/Starting_Points/point_03/ending_points_03.dart';
 //import 'package:maps/Starting_Points/point_04/ending_points_04.dart';
 //import 'package:maps/Starting_Points/point_05/ending_points_05.dart';
-import 'package:maps/full_map.dart';
-import 'package:maps/overall_route/route01.dart';
-import 'package:maps/overall_route/route02.dart';
+import 'package:maps/controllers/full_map.dart';
+import 'package:maps/controllers/overall_route/route01.dart';
+import 'package:maps/controllers/overall_route/route02.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -213,10 +214,10 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     ElevatedButton.icon(
                         onPressed: () {
-                          /*Navigator.push(
+                          Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => EndingPoints02()));*/
+                              builder: (context) => const EndingPoints02()));
                         },
                         icon: const Icon(Icons.looks_two_rounded),
                         label: const Text('Starting Point 02')),

@@ -2,11 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as location;
-import 'package:maps/Coordinates.dart';
+import 'package:maps/coordinates/point02_Coordinates.dart';
 import 'package:provider/provider.dart';
 import 'dart:async' show Future;
 
-class LocationProvider1 extends ChangeNotifier {
+class LocationProvider32 extends ChangeNotifier {
   LatLng? _currentLocation;
 
   LatLng? get currentLocation => _currentLocation;
@@ -17,29 +17,30 @@ class LocationProvider1 extends ChangeNotifier {
   }
 }
 
-class P1Page extends StatefulWidget {
-  const P1Page({super.key});
+class sp02bopath_02Page extends StatefulWidget {
+  const sp02bopath_02Page({super.key});
 
   @override
-  State<P1Page> createState() => _P1PageState();
+  State<sp02bopath_02Page> createState() => _sp02bopath_02PageState();
 }
 
-class _P1PageState extends State<P1Page> {
+class _sp02bopath_02PageState extends State<sp02bopath_02Page> {
   late GoogleMapController _controller;
-  late LocationProvider1 _locationProvider;
+  late LocationProvider32 _locationProvider;
   final location.Location _location = location.Location();
   MapType _mapType = MapType.normal;
   bool _centerOnLocation = true;
 
   // Define a list of LatLng points for your polyline
-  List<LatLng> polylineCoordinates01 = polylineCoordinates.route1;
+  List<LatLng> polylineCoordinates02 = polylineCoordinatespoint02.sp02bopath_02;
+
   // Create a Polyline object with the polyline details
-  final Set<Polyline> _polyline01 = {};
+  final Set<Polyline> _polyline02 = {};
 
   @override
   void initState() {
     super.initState();
-    _locationProvider = Provider.of<LocationProvider1>(context, listen: false);
+    _locationProvider = Provider.of<LocationProvider32>(context, listen: false);
   }
 
   @override
@@ -58,11 +59,11 @@ class _P1PageState extends State<P1Page> {
               myLocationButtonEnabled: false,
               mapType: _mapType,
               initialCameraPosition: const CameraPosition(
-                target: LatLng(6.802005081000061, 80.80740669200003),
+                target: LatLng(6.770933347000039, 80.77191361900003),
               ),
               onMapCreated: _onMapCreated,
               myLocationEnabled: true,
-              polylines: _polyline01, // Use the _polylines set here
+              polylines: _polyline02, // Use the _polylines set here
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -96,27 +97,34 @@ class _P1PageState extends State<P1Page> {
       if (_locationProvider.currentLocation == null) {
         _locationProvider
             .updateCurrentLocation(LatLng(l.latitude!, l.longitude!));
+        _controller.animateCamera(CameraUpdate.newCameraPosition(
+          CameraPosition(target: _locationProvider.currentLocation!, zoom: 16),
+        ));
+        /*if (_locationProvider.currentLocation == null) {
+        _locationProvider
+            .updateCurrentLocation(LatLng(l.latitude!, l.longitude!));
       }
       if (_locationProvider.currentLocation != null && _centerOnLocation) {
         _controller.animateCamera(CameraUpdate.newCameraPosition(
           CameraPosition(target: _locationProvider.currentLocation!, zoom: 19),
-        ));
+        ));*/
         // Update the polylines
-        _updatePolyline01();
+        //_updatePolyline01();
+        _updatePolyline02();
         _centerOnLocation = false;
       }
     });
   }
 
-  // Function to update polyline 01
-  void _updatePolyline01() {
+  // Function to update polyline 02
+  void _updatePolyline02() {
     setState(() {
-      _polyline01.clear();
-      _polyline01.add(Polyline(
+      _polyline02.clear();
+      _polyline02.add(Polyline(
         polylineId: const PolylineId('polyline_02'),
-        color: Colors.red,
+        color: const Color.fromARGB(255, 48, 142, 229),
         width: 10,
-        points: polylineCoordinates01,
+        points: polylineCoordinates02,
       ));
     });
   }
@@ -159,4 +167,5 @@ class _P1PageState extends State<P1Page> {
       return null;
     }
   }
+
 }

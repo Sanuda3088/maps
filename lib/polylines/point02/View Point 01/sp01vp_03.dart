@@ -2,11 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as location;
-import 'package:maps/Coordinates.dart';
+import 'package:maps/coordinates/point02_Coordinates.dart';
 import 'package:provider/provider.dart';
 import 'dart:async' show Future;
 
-class LocationProvider2 extends ChangeNotifier {
+class LocationProvider39 extends ChangeNotifier {
   LatLng? _currentLocation;
 
   LatLng? get currentLocation => _currentLocation;
@@ -17,22 +17,22 @@ class LocationProvider2 extends ChangeNotifier {
   }
 }
 
-class P2Page extends StatefulWidget {
-  const P2Page({super.key});
+class sp02vp_03Page extends StatefulWidget {
+  const sp02vp_03Page({super.key});
 
   @override
-  State<P2Page> createState() => _P2PageState();
+  State<sp02vp_03Page> createState() => _sp02vp_03PageState();
 }
 
-class _P2PageState extends State<P2Page> {
+class _sp02vp_03PageState extends State<sp02vp_03Page> {
   late GoogleMapController _controller;
-  late LocationProvider2 _locationProvider;
+  late LocationProvider39 _locationProvider;
   final location.Location _location = location.Location();
   MapType _mapType = MapType.normal;
   bool _centerOnLocation = true;
 
   // Define a list of LatLng points for your polyline
-  List<LatLng> polylineCoordinates02 = polylineCoordinates.route2;
+  List<LatLng> polylineCoordinates02 = polylineCoordinatespoint02.sp02vp_03;
 
   // Create a Polyline object with the polyline details
   final Set<Polyline> _polyline02 = {};
@@ -40,7 +40,7 @@ class _P2PageState extends State<P2Page> {
   @override
   void initState() {
     super.initState();
-    _locationProvider = Provider.of<LocationProvider2>(context, listen: false);
+    _locationProvider = Provider.of<LocationProvider39>(context, listen: false);
   }
 
   @override
@@ -59,7 +59,7 @@ class _P2PageState extends State<P2Page> {
               myLocationButtonEnabled: false,
               mapType: _mapType,
               initialCameraPosition: const CameraPosition(
-                target: LatLng(7.0809558615927495, 80.02046294561433),
+                target: LatLng(6.770933347000039, 80.77191361900003),
               ),
               onMapCreated: _onMapCreated,
               myLocationEnabled: true,
@@ -122,7 +122,7 @@ class _P2PageState extends State<P2Page> {
       _polyline02.clear();
       _polyline02.add(Polyline(
         polylineId: const PolylineId('polyline_02'),
-        color: Colors.red,
+        color: const Color.fromARGB(255, 48, 142, 229),
         width: 10,
         points: polylineCoordinates02,
       ));

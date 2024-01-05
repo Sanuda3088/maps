@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maps/map_tile.dart';
+import 'package:maps/controllers/map_tile.dart';
 import 'package:maps/polylines/point01/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_01.dart';
 import 'package:maps/polylines/point01/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_02.dart';
 import 'package:maps/polylines/point01/Aggra%20Falls/sp01aggra_01.dart';
@@ -42,7 +42,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Ending Points 01"),
+        title: const Text("Starting Points 01"),
         centerTitle: true,
         backgroundColor: Colors.grey.shade900,
       ),
@@ -79,7 +79,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       MapTile(
                         pathName: "B",
                         onImageTap: (BuildContext) {
-                          Navigator.push(
+                          return Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
