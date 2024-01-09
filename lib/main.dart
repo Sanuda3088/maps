@@ -47,6 +47,8 @@ import 'package:maps/polylines/point02/Great%20Worlds%20End%20Drop/sp01we_01.dar
 import 'package:maps/polylines/point02/Great%20Worlds%20End%20Drop/sp01we_02.dart';
 import 'package:maps/polylines/point02/Great%20Worlds%20End%20Drop/sp01we_03.dart';
 import 'package:maps/polylines/point02/Kirigalpoththa%20Mountain%20Peak/sp01k_01.dart';
+import 'package:maps/polylines/point02/Kirigalpoththa%20Mountain%20Peak/sp01k_02.dart';
+import 'package:maps/polylines/point02/Kirigalpoththa%20Mountain%20Peak/sp01k_03.dart';
 import 'package:maps/polylines/point02/Mini%20Worlds%20End%20Drop/sp01mwe_01.dart';
 import 'package:maps/polylines/point02/Mini%20Worlds%20End%20Drop/sp01mwe_02.dart';
 import 'package:maps/polylines/point02/Mini%20Worlds%20End%20Drop/sp01mwe_03.dart';
@@ -58,6 +60,53 @@ import 'package:maps/polylines/point02/View%20Point%2001/sp01vp_02.dart';
 import 'package:maps/polylines/point02/View%20Point%2001/sp01vp_03.dart';
 import 'package:maps/polylines/point02/View%20Point%2002/sp01vp2_02.dart';
 import 'package:maps/polylines/point02/View%20Point%2002/sp01vp2_03.dart';
+import 'package:maps/polylines/point03/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_01.dart';
+import 'package:maps/polylines/point03/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_02.dart';
+import 'package:maps/polylines/point03/Aggra%20Falls/sp01aggra_01.dart';
+import 'package:maps/polylines/point03/Aggra%20Falls/sp01aggra_02.dart';
+import 'package:maps/polylines/point03/Ambewela%20Farm/sp01a_01.dart';
+import 'package:maps/polylines/point03/Bakers%20Falls/sp01backers_01.dart';
+import 'package:maps/polylines/point03/Bakers%20Falls/sp01backers_02.dart';
+import 'package:maps/polylines/point03/Galagama%20Falls/sp01galagama_01.dart';
+import 'package:maps/polylines/point03/Galagama%20Falls/sp01galagama_02.dart';
+import 'package:maps/polylines/point03/Galagama%20Falls/sp01galagama_03.dart';
+import 'package:maps/polylines/point03/Great%20Worlds%20End%20Drop/sp01we_01.dart';
+import 'package:maps/polylines/point03/Great%20Worlds%20End%20Drop/sp01we_02.dart';
+import 'package:maps/polylines/point03/Great%20Worlds%20End%20Drop/sp01we_03.dart';
+import 'package:maps/polylines/point03/Kirigalpoththa%20Mountain%20Peak/sp01k_01.dart';
+import 'package:maps/polylines/point03/Kirigalpoththa%20Mountain%20Peak/sp01k_02.dart';
+import 'package:maps/polylines/point03/Kirigalpoththa%20Mountain%20Peak/sp01k_03.dart';
+import 'package:maps/polylines/point03/Mini%20Worlds%20End%20Drop/sp01mwe_01.dart';
+import 'package:maps/polylines/point03/Mini%20Worlds%20End%20Drop/sp01mwe_02.dart';
+import 'package:maps/polylines/point03/Newzealand%20Farm/sp01newz_01.dart';
+import 'package:maps/polylines/point03/Newzealand%20Farm/sp01newz_02.dart';
+import 'package:maps/polylines/point03/View%20Point%2001/sp01vp_01.dart';
+import 'package:maps/polylines/point03/View%20Point%2001/sp01vp_02.dart';
+import 'package:maps/polylines/point03/View%20Point%2001/sp01vp_03.dart';
+import 'package:maps/polylines/point03/View%20Point%2002/sp01vp2_01.dart';
+import 'package:maps/polylines/point03/View%20Point%2002/sp01vp2_02.dart';
+import 'package:maps/polylines/point04/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_01.dart';
+import 'package:maps/polylines/point04/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_02.dart';
+import 'package:maps/polylines/point04/Aggra%20Falls/sp01aggra_01.dart';
+import 'package:maps/polylines/point04/Aggra%20Falls/sp01aggra_02.dart';
+import 'package:maps/polylines/point04/Ambewela%20Farm/sp01a_01.dart';
+import 'package:maps/polylines/point04/Ambewela%20Farm/sp01a_02.dart';
+import 'package:maps/polylines/point04/Bakers%20Falls/sp01backers_01.dart';
+import 'package:maps/polylines/point04/Bakers%20Falls/sp01backers_02.dart';
+import 'package:maps/polylines/point04/Galagama%20Falls/sp01galagama_01.dart';
+import 'package:maps/polylines/point04/Galagama%20Falls/sp01galagama_02.dart';
+import 'package:maps/polylines/point04/Galagama%20Falls/sp01galagama_03.dart';
+import 'package:maps/polylines/point04/Great%20Worlds%20End%20Drop/sp01we_01.dart';
+import 'package:maps/polylines/point04/Great%20Worlds%20End%20Drop/sp01we_02.dart';
+import 'package:maps/polylines/point04/Kirigalpoththa%20Mountain%20Peak/sp01k_01.dart';
+import 'package:maps/polylines/point04/Kirigalpoththa%20Mountain%20Peak/sp01k_02.dart';
+import 'package:maps/polylines/point04/Mini%20Worlds%20End%20Drop/sp01mwe_01.dart';
+import 'package:maps/polylines/point04/Newzealand%20Farm/sp01newz_01.dart';
+import 'package:maps/polylines/point04/Newzealand%20Farm/sp01newz_02.dart';
+import 'package:maps/polylines/point04/View%20Point%2001/sp01vp_01.dart';
+import 'package:maps/polylines/point04/View%20Point%2001/sp01vp_02.dart';
+import 'package:maps/polylines/point04/View%20Point%2002/sp01vp2_01.dart';
+import 'package:maps/polylines/point04/View%20Point%2002/sp01vp2_02.dart';
 import 'package:provider/provider.dart';
 import 'controllers/homepage.dart';
 
@@ -127,6 +176,59 @@ void main() {
         ChangeNotifierProvider(create: (context) => LocationProvider57()),
         ChangeNotifierProvider(create: (context) => LocationProvider58()),
         ChangeNotifierProvider(create: (context) => LocationProvider59()),
+        ChangeNotifierProvider(create: (context) => LocationProvider60()),
+        ChangeNotifierProvider(create: (context) => LocationProvider61()),
+        ChangeNotifierProvider(create: (context) => LocationProvider62()),
+        ChangeNotifierProvider(create: (context) => LocationProvider63()),
+        ChangeNotifierProvider(create: (context) => LocationProvider64()),
+        ChangeNotifierProvider(create: (context) => LocationProvider65()),
+        ChangeNotifierProvider(create: (context) => LocationProvider66()),
+        ChangeNotifierProvider(create: (context) => LocationProvider67()),
+        ChangeNotifierProvider(create: (context) => LocationProvider68()),
+        ChangeNotifierProvider(create: (context) => LocationProvider69()),
+        ChangeNotifierProvider(create: (context) => LocationProvider70()),
+        ChangeNotifierProvider(create: (context) => LocationProvider71()),
+        ChangeNotifierProvider(create: (context) => LocationProvider72()),
+        ChangeNotifierProvider(create: (context) => LocationProvider73()),
+        ChangeNotifierProvider(create: (context) => LocationProvider74()),
+        ChangeNotifierProvider(create: (context) => LocationProvider75()),
+        ChangeNotifierProvider(create: (context) => LocationProvider76()),
+        ChangeNotifierProvider(create: (context) => LocationProvider77()),
+        ChangeNotifierProvider(create: (context) => LocationProvider78()),
+        ChangeNotifierProvider(create: (context) => LocationProvider79()),
+        ChangeNotifierProvider(create: (context) => LocationProvider80()),
+        ChangeNotifierProvider(create: (context) => LocationProvider81()),
+        ChangeNotifierProvider(create: (context) => LocationProvider82()),
+        ChangeNotifierProvider(create: (context) => LocationProvider83()),
+        ChangeNotifierProvider(create: (context) => LocationProvider84()),
+        ChangeNotifierProvider(create: (context) => LocationProvider85()),
+        ChangeNotifierProvider(create: (context) => LocationProvider86()),
+        ChangeNotifierProvider(create: (context) => LocationProvider87()),
+        ChangeNotifierProvider(create: (context) => LocationProvider88()),
+        ChangeNotifierProvider(create: (context) => LocationProvider89()),
+        ChangeNotifierProvider(create: (context) => LocationProvider90()),
+        ChangeNotifierProvider(create: (context) => LocationProvider91()),
+        ChangeNotifierProvider(create: (context) => LocationProvider92()),
+        ChangeNotifierProvider(create: (context) => LocationProvider93()),
+        ChangeNotifierProvider(create: (context) => LocationProvider94()),
+        ChangeNotifierProvider(create: (context) => LocationProvider95()),
+        ChangeNotifierProvider(create: (context) => LocationProvider96()),
+        ChangeNotifierProvider(create: (context) => LocationProvider97()),
+        ChangeNotifierProvider(create: (context) => LocationProvider98()),
+        ChangeNotifierProvider(create: (context) => LocationProvider99()),
+        ChangeNotifierProvider(create: (context) => LocationProvider100()),
+        ChangeNotifierProvider(create: (context) => LocationProvider101()),
+        ChangeNotifierProvider(create: (context) => LocationProvider102()),
+        ChangeNotifierProvider(create: (context) => LocationProvider103()),
+        ChangeNotifierProvider(create: (context) => LocationProvider104()),
+        ChangeNotifierProvider(create: (context) => LocationProvider105()),
+        ChangeNotifierProvider(create: (context) => LocationProvider106()),
+        ChangeNotifierProvider(create: (context) => LocationProvider107()),
+        ChangeNotifierProvider(create: (context) => LocationProvider108()),
+        //ChangeNotifierProvider(create: (context) => LocationProvider109()),
+
+        //ChangeNotifierProvider(create: (context) => LocationProvider62()),
+        //ChangeNotifierProvider(create: (context) => LocationProvider63()),
         // Add other providers if needed
       ],
       child: const MyApp(),
