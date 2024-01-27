@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
 
-
 class MapTile extends StatelessWidget {
-  //final String coffeeImagePath;
+  String hDistance;
+  String elevation;
+  String slope;
+  String time;
   final String pathName;
   final Function(BuildContext) onImageTap;
 
-  const MapTile({
+  MapTile({
     super.key,
-    //required this.coffeeImagePath,
+    required this.hDistance,
+    required this.elevation,
+    required this.slope,
+    required this.time,
     required this.pathName,
     required this.onImageTap,
   });
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(left: 25.0, bottom: 5.0),
       child: Container(
         padding: const EdgeInsets.all(16),
-        width: 200,
+        width: width * 0.5,
+        height: height * 0.8,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.black54,
@@ -27,7 +35,8 @@ class MapTile extends StatelessWidget {
           children: [
             // Coffee image
             GestureDetector(
-              onTap: () {onImageTap(context);
+              onTap: () {
+                onImageTap(context);
                 /*Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -43,20 +52,63 @@ class MapTile extends StatelessWidget {
 
             // Coffee name
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
+              padding: const EdgeInsets.only(left: 8.0, top: 14.0, bottom: 4.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    pathName,
-                    style: const TextStyle(fontSize: 20),
+                  RichText(
+                    text: TextSpan(
+                      style: const TextStyle(fontSize: 18),
+                      children: <TextSpan>[
+                        const TextSpan(
+                            text: 'Route: ',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '$pathName'),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 5),
-                  /*const Text(
-                    elevation,
-                    style: TextStyle(fontSize: 15),
-                  ),*/
+                  RichText(
+                    text: TextSpan(
+                      style: const TextStyle(fontSize: 18),
+                      children: <TextSpan>[
+                        const TextSpan(
+                            text: 'Distance: ',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '${hDistance}km'),
+                      ],
+                    ),
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      style: const TextStyle(fontSize: 18),
+                      children: <TextSpan>[
+                        const TextSpan(
+                            text: 'Elevation: ',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '${elevation}m'),
+                      ],
+                    ),
+                  ),
+                  const Text(
+                    "Average Slope: ",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    slope,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      style: const TextStyle(fontSize: 18),
+                      children: <TextSpan>[
+                        const TextSpan(
+                            text: 'Time: ',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: '${time}h'),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -107,6 +107,33 @@ import 'package:maps/polylines/point04/View%20Point%2001/sp01vp_01.dart';
 import 'package:maps/polylines/point04/View%20Point%2001/sp01vp_02.dart';
 import 'package:maps/polylines/point04/View%20Point%2002/sp01vp2_01.dart';
 import 'package:maps/polylines/point04/View%20Point%2002/sp01vp2_02.dart';
+import 'package:maps/polylines/point05/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_01.dart';
+import 'package:maps/polylines/point05/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_02.dart';
+import 'package:maps/polylines/point05/Aggra%20Bopath%20Mountain%20Peak/sp01bopath_03.dart';
+import 'package:maps/polylines/point05/Aggra%20Falls/sp01aggra_01.dart';
+import 'package:maps/polylines/point05/Aggra%20Falls/sp01aggra_02.dart';
+import 'package:maps/polylines/point05/Ambewela%20Farm/sp01a_01.dart';
+import 'package:maps/polylines/point05/Ambewela%20Farm/sp01a_02.dart';
+import 'package:maps/polylines/point05/Bakers%20Falls/sp01backers_01.dart';
+import 'package:maps/polylines/point05/Bakers%20Falls/sp01backers_02.dart';
+import 'package:maps/polylines/point05/Galagama%20Falls/sp01galagama_01.dart';
+import 'package:maps/polylines/point05/Galagama%20Falls/sp01galagama_02.dart';
+import 'package:maps/polylines/point05/Great%20Worlds%20End%20Drop/sp01we_01.dart';
+import 'package:maps/polylines/point05/Great%20Worlds%20End%20Drop/sp01we_02.dart';
+import 'package:maps/polylines/point05/Great%20Worlds%20End%20Drop/sp01we_03.dart';
+import 'package:maps/polylines/point05/Kirigalpoththa%20Mountain%20Peak/sp01k_01.dart';
+import 'package:maps/polylines/point05/Kirigalpoththa%20Mountain%20Peak/sp01k_02.dart';
+import 'package:maps/polylines/point05/Kirigalpoththa%20Mountain%20Peak/sp01k_03.dart';
+import 'package:maps/polylines/point05/Mini%20Worlds%20End%20Drop/sp01mwe_01.dart';
+import 'package:maps/polylines/point05/Mini%20Worlds%20End%20Drop/sp01mwe_02.dart';
+import 'package:maps/polylines/point05/Newzealand%20Farm/sp01newz_01.dart';
+import 'package:maps/polylines/point05/Newzealand%20Farm/sp01newz_02.dart';
+import 'package:maps/polylines/point05/View%20Point%2001/sp01vp_01.dart';
+import 'package:maps/polylines/point05/View%20Point%2001/sp01vp_02.dart';
+import 'package:maps/polylines/point05/View%20Point%2001/sp01vp_03.dart';
+import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_01.dart';
+import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_02.dart';
+import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_03.dart';
 import 'package:provider/provider.dart';
 import 'controllers/homepage.dart';
 
@@ -225,7 +252,34 @@ void main() {
         ChangeNotifierProvider(create: (context) => LocationProvider106()),
         ChangeNotifierProvider(create: (context) => LocationProvider107()),
         ChangeNotifierProvider(create: (context) => LocationProvider108()),
-        //ChangeNotifierProvider(create: (context) => LocationProvider109()),
+        ChangeNotifierProvider(create: (context) => LocationProvider109()),
+        ChangeNotifierProvider(create: (context) => LocationProvider110()),
+        ChangeNotifierProvider(create: (context) => LocationProvider111()),
+        ChangeNotifierProvider(create: (context) => LocationProvider112()),
+        ChangeNotifierProvider(create: (context) => LocationProvider113()),
+        ChangeNotifierProvider(create: (context) => LocationProvider114()),
+        ChangeNotifierProvider(create: (context) => LocationProvider115()),
+        ChangeNotifierProvider(create: (context) => LocationProvider116()),
+        ChangeNotifierProvider(create: (context) => LocationProvider117()),
+        ChangeNotifierProvider(create: (context) => LocationProvider118()),
+        ChangeNotifierProvider(create: (context) => LocationProvider119()),
+        ChangeNotifierProvider(create: (context) => LocationProvider120()),
+        ChangeNotifierProvider(create: (context) => LocationProvider121()),
+        ChangeNotifierProvider(create: (context) => LocationProvider122()),
+        ChangeNotifierProvider(create: (context) => LocationProvider123()),
+        ChangeNotifierProvider(create: (context) => LocationProvider124()),
+        ChangeNotifierProvider(create: (context) => LocationProvider125()),
+        ChangeNotifierProvider(create: (context) => LocationProvider126()),
+        ChangeNotifierProvider(create: (context) => LocationProvider127()),
+        ChangeNotifierProvider(create: (context) => LocationProvider128()),
+        ChangeNotifierProvider(create: (context) => LocationProvider129()),
+        ChangeNotifierProvider(create: (context) => LocationProvider130()),
+        ChangeNotifierProvider(create: (context) => LocationProvider131()),
+        ChangeNotifierProvider(create: (context) => LocationProvider132()),
+        ChangeNotifierProvider(create: (context) => LocationProvider133()),
+        ChangeNotifierProvider(create: (context) => LocationProvider134()),
+        ChangeNotifierProvider(create: (context) => LocationProvider135()),
+        //ChangeNotifierProvider(create: (context) => LocationProvider136()),
 
         //ChangeNotifierProvider(create: (context) => LocationProvider62()),
         //ChangeNotifierProvider(create: (context) => LocationProvider63()),
@@ -246,8 +300,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.orange
-        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        primarySwatch: Colors.orange,
       ),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,

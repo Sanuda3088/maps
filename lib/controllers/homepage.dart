@@ -3,14 +3,8 @@ import 'package:maps/Starting_Points/point_01/ending_points_01.dart';
 import 'package:maps/Starting_Points/point_02/ending_points_02.dart';
 import 'package:maps/Starting_Points/point_03/ending_points_02.dart';
 import 'package:maps/Starting_Points/point_04/ending_points_02.dart';
-//import 'package:maps/Starting_Points/point_02/ending_points_02.dart';
-//import 'package:maps/Starting_Points/point_03/ending_points_03.dart';
-//import 'package:maps/Starting_Points/point_04/ending_points_04.dart';
-//import 'package:maps/Starting_Points/point_05/ending_points_05.dart';
+import 'package:maps/Starting_Points/point_05/ending_points_05.dart';
 import 'package:maps/controllers/full_map.dart';
-import 'package:maps/controllers/overall_route/route01.dart';
-import 'package:maps/controllers/overall_route/route02.dart';
-import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,14 +15,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  GoogleMapController? _mapController;
   Set<Marker> _markers = Set();
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Home Page'),
+          title: const Text('Home Page',style: TextStyle(color: Colors.orange)),
           centerTitle: true,
           backgroundColor: Colors.grey.shade900,
         ),
@@ -44,8 +36,6 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onMapCreated: (GoogleMapController controller) {
                   setState(() {
-                    _mapController = controller;
-
                     // Add markers for starting points (green triangles)
                     _addMarker(
                         6.7664473300000623,
@@ -166,9 +156,10 @@ class _HomePageState extends State<HomePage> {
                 markers: _markers,
               ),
             ),
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Row(
+                Column(
                   children: [
                     ElevatedButton.icon(
                         onPressed: () {
@@ -177,83 +168,62 @@ class _HomePageState extends State<HomePage> {
                               MaterialPageRoute(
                                   builder: (context) => const FullMapPage()));
                         },
-                        icon: const Icon(Icons.location_on_rounded),
-                        label: const Text('Current Location')),
+                        icon: const Icon(Icons.location_on_rounded,color: Colors.orange,),
+                        label: const Text('Current Location',style: TextStyle(color: Colors.orange),)),
                     ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => R1Page()));
+                                  builder: (context) =>
+                                      const EndingPoints01()));
                         },
-                        icon: const Icon(Icons.looks_one_rounded),
-                        label: const Text('Polyline 01')),
+                        icon: const Icon(Icons.looks_one_rounded,color: Colors.orange,),
+                        label: const Text('Starting Point 01',style: TextStyle(color: Colors.orange),)),
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const EndingPoints02()));
+                        },
+                        icon: const Icon(Icons.looks_two_rounded,color: Colors.orange,),
+                        label: const Text('Starting Point 02',style: TextStyle(color: Colors.orange),)),
                   ],
                 ),
-                Row(
+                Column(
                   children: [
                     ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => R2Page()));
+                                  builder: (context) =>
+                                      const EndingPoints03()));
                         },
-                        icon: const Icon(Icons.looks_two_rounded),
-                        label: const Text('Polyline 02')),
+                        icon: const Icon(Icons.looks_3_rounded,color: Colors.orange,),
+                        label: const Text('Starting Point 03',style: TextStyle(color: Colors.orange),)),
                     ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const EndingPoints01()));
+                                  builder: (context) =>
+                                      const EndingPoints04()));
                         },
-                        icon: const Icon(Icons.looks_one_rounded),
-                        label: const Text('Starting Point 01')),
-                  ],
-                ),
-                Row(
-                  children: [
+                        icon: const Icon(Icons.looks_4_rounded,color: Colors.orange,),
+                        label: const Text('Starting Point 04',style: TextStyle(color: Colors.orange),)),
                     ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const EndingPoints02()));
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const EndingPoints05()));
                         },
-                        icon: const Icon(Icons.looks_two_rounded),
-                        label: const Text('Starting Point 02')),
-                    ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const EndingPoints03()));
-                        },
-                        icon: const Icon(Icons.looks_3_rounded),
-                        label: const Text('Starting Point 03')),
-                  ],
-                ),
-                Row(
-                  children: [
-                    ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const EndingPoints04()));
-                        },
-                        icon: const Icon(Icons.looks_4_rounded),
-                        label: const Text('Starting Point 04')),
-                    ElevatedButton.icon(
-                        onPressed: () {
-                          /*Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => EndingPoints05()));*/
-                        },
-                        icon: const Icon(Icons.looks_5_rounded),
-                        label: const Text('Starting Point 05')),
+                        icon: const Icon(Icons.looks_5_rounded,color: Colors.orange,),
+                        label: const Text('Starting Point 05',style: TextStyle(color: Colors.orange),)),
                   ],
                 )
               ],
@@ -262,7 +232,8 @@ class _HomePageState extends State<HomePage> {
         ));
   }
 
-  void _addMarker(double lat, double lng, String title, String snippet, BitmapDescriptor icon) {
+  void _addMarker(double lat, double lng, String title, String snippet,
+      BitmapDescriptor icon) {
     _markers.add(
       Marker(
         markerId: MarkerId('$lat,$lng'),

@@ -55,7 +55,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Galagama Falls",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: Colors.orange),
               ),
             ),
             Row(
@@ -67,6 +67,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '1.4', 
+                        elevation: '96', 
+                        slope: '13.6% , -15.8%', 
+                        time: '0.5',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -78,6 +82,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '2', 
+                        elevation: '112', 
+                        slope: '10% , -12.8%', 
+                        time: '0.7',
                         onImageTap: (BuildContext) {
                           return Navigator.push(
                             context,
@@ -98,7 +106,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Baker's Falls",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -110,6 +118,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '5.3', 
+                        elevation: '440', 
+                        slope: '17.2% , -11.9%', 
+                        time: '1.5',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -121,6 +133,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '4.9', 
+                        elevation: '403', 
+                        slope: '17.2% , -11.3%', 
+                        time: '1.4',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -132,6 +148,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '7', 
+                        elevation: '600', 
+                        slope: '18.3% , -12.7%', 
+                        time: '2.5',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -152,7 +172,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Aggra Falls",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -164,6 +184,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '12.9', 
+                        elevation: '758', 
+                        slope: '12.6% , -11.5%', 
+                        time: '4.2',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -174,6 +198,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '14.5', 
+                        elevation: '900', 
+                        slope: '13.2% , -11.9%', 
+                        time: '4.75',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -193,7 +221,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Newzealand Farm",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -205,6 +233,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '18.5', 
+                        elevation: '960', 
+                        slope: '10.7% , -11.3%', 
+                        time: '5.8',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -215,6 +247,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '20', 
+                        elevation: '1710', 
+                        slope: '11.3% , -11.7%', 
+                        time: '7.25',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -225,6 +261,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '21', 
+                        elevation: '1122', 
+                        slope: '11.7% , -10.9%', 
+                        time: '6.7',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -244,7 +284,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Ambewela Farm",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -256,6 +296,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '17.3', 
+                        elevation: '925', 
+                        slope: '9.6% , -10.6%', 
+                        time: '5.5',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -266,6 +310,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '19.8', 
+                        elevation: '1085', 
+                        slope: '10.7% , -10.2%', 
+                        time: '6.3',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -285,7 +333,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Great World's End Drop",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -297,6 +345,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '5.5', 
+                        elevation: '412.4', 
+                        slope: '14.1% , -10.8%', 
+                        time: '1.9',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -307,6 +359,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '8', 
+                        elevation: '852', 
+                        slope: '13.3% , -10.2% ', 
+                        time: '3.1',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -317,6 +373,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '15.3', 
+                        elevation: '1050.3', 
+                        slope: '14% , -10.7% ', 
+                        time: '5.1',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -336,7 +396,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Aggra Bopath Mountain Peak",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -348,6 +408,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '13', 
+                        elevation: '910.5', 
+                        slope: '11.2% , -10.2%', 
+                        time: '4.4',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -359,6 +423,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '7.4', 
+                        elevation: '747.7', 
+                        slope: '17.7% , -13.3% ', 
+                        time: '2.8',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -379,7 +447,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Kirigalpoththa Mountain Peak",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -391,6 +459,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '4.8', 
+                        elevation: '563', 
+                        slope: '18.4% , -9.4%', 
+                        time: '2',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -401,6 +473,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '8', 
+                        elevation: '814', 
+                        slope: '17.6% , -11.5% ', 
+                        time: '3',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -420,7 +496,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " Mini World's End Drop",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -432,6 +508,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '6.5', 
+                        elevation: '500', 
+                        slope: '13.4% , -10.8%', 
+                        time: '2.3',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -442,6 +522,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '12', 
+                        elevation: '798', 
+                        slope: '13.5% , -10.5%', 
+                        time: '4',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -452,6 +536,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '9.6', 
+                        elevation: '734', 
+                        slope: '14.7% , -12.3%', 
+                        time: '3.3',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -471,7 +559,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " View Point 01",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -483,6 +571,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '7.3', 
+                        elevation: '546.2', 
+                        slope: '15.1% , -12.9%', 
+                        time: '2.1',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -493,6 +585,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '4.3', 
+                        elevation: '541', 
+                        slope: '16% , -13.2%', 
+                        time: '1.9',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -503,6 +599,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '7.6', 
+                        elevation: '697', 
+                        slope: '17.3% , -16.9%', 
+                        time: '2.8',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -522,7 +622,7 @@ class _EndingPoints01State extends State<EndingPoints01> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 " View Point 02",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.orange,fontSize: 20, fontWeight: FontWeight.w600),
               ),
             ),
             Row(
@@ -534,6 +634,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                         ListView(scrollDirection: Axis.horizontal, children: [
                       MapTile(
                         pathName: "A",
+                        hDistance: '7.8', 
+                        elevation: '577', 
+                        slope: '15.5% , -14.6%', 
+                        time: '2.7',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -544,6 +648,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "B",
+                        hDistance: '7', 
+                        elevation: '463', 
+                        slope: '14.5% , -13.5%', 
+                        time: '2.3',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
@@ -554,6 +662,10 @@ class _EndingPoints01State extends State<EndingPoints01> {
                       ),
                       MapTile(
                         pathName: "C",
+                        hDistance: '9.9', 
+                        elevation: '784', 
+                        slope: '15.4% , -16.1%', 
+                        time: '3.5',
                         onImageTap: (BuildContext) {
                           Navigator.push(
                             context,
