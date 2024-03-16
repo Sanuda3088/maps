@@ -39,7 +39,7 @@ class _EndingPoints03State extends State<EndingPoints03> {
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Starting Points 02"),
+        title: const Text("Starting Point 03"),
         centerTitle: true,
         backgroundColor: Colors.grey.shade900,
       ),

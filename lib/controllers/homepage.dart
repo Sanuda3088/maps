@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                         6.7664473300000623,
                         80.781078363000063,
                         'Starting Point 1',
-                        'Description 1',
+                        'Nagrak Holiday Bunglow',
                         BitmapDescriptor.defaultMarkerWithHue(
                             BitmapDescriptor.hueGreen));
                     _addMarker(

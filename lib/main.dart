@@ -134,6 +134,7 @@ import 'package:maps/polylines/point05/View%20Point%2001/sp01vp_03.dart';
 import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_01.dart';
 import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_02.dart';
 import 'package:maps/polylines/point05/View%20Point%2002/sp01vp2_03.dart';
+import 'package:maps/splashscreen.dart';
 import 'package:provider/provider.dart';
 import 'controllers/homepage.dart';
 
@@ -302,7 +303,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primarySwatch: Colors.orange,
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
